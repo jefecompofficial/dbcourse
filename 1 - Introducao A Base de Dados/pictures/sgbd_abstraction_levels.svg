@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="130.92712mm"
+   height="136.13727mm"
+   viewBox="0 0 130.92712 136.13723"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="sgbd_abstraction_levels.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5304"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path5302"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4561">
+      <stop
+         style="stop-color:#ffccaa;stop-opacity:1;"
+         offset="0"
+         id="stop4557" />
+      <stop
+         style="stop-color:#ffccaa;stop-opacity:0;"
+         offset="1"
+         id="stop4559" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4561"
+       id="linearGradient4555"
+       x1="92.604164"
+       y1="135.60417"
+       x2="92.604164"
+       y2="156.77083"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.4622039,-1.6938624,-42.581821)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4561"
+       id="linearGradient5159"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-90.728015,-22.020546)"
+       x1="92.604164"
+       y1="135.60417"
+       x2="92.604164"
+       y2="156.77083" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5165"
+       x="-0.028908145"
+       width="1.0578163"
+       y="-0.14135595"
+       height="1.2827119">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.4715433"
+         id="feGaussianBlur5167" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4561"
+       id="linearGradient5171"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1.5875,47.625024)"
+       x1="92.604164"
+       y1="135.60417"
+       x2="92.604164"
+       y2="156.77083" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4561"
+       id="linearGradient5175"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(1.5875,92.604219)"
+       x1="92.604164"
+       y1="135.60417"
+       x2="92.604164"
+       y2="156.77083" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.2496094"
+     inkscape:cx="116.20505"
+     inkscape:cy="213.95228"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1918"
+     inkscape:window-height="1078"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:snap-to-guides="false"
+     inkscape:snap-grids="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4547"
+       originx="-34.473844"
+       originy="-110.09195" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-34.473845,-50.770448)">
+    <rect
+       style="opacity:1;fill:url(#linearGradient5171);fill-opacity:1;stroke:#1a1a1a;stroke-width:0.06614583;stroke-miterlimit:3.4000001;stroke-dasharray:none;filter:url(#filter5165)"
+       id="rect5169"
+       width="122.16985"
+       height="24.984474"
+       x="39.699409"
+       y="113.41278"
+       ry="1.984375" />
+    <rect
+       ry="1.984375"
+       y="111.0315"
+       x="38.111908"
+       height="24.984474"
+       width="122.16985"
+       id="rect12"
+       style="opacity:1;fill:#ffccaa;stroke:#1a1a1a;stroke-width:0.06614583;stroke-miterlimit:3.4000001;stroke-dasharray:none" />
+    <rect
+       ry="1.984375"
+       y="158.39154"
+       x="39.699409"
+       height="24.984474"
+       width="122.16985"
+       id="rect5173"
+       style="opacity:1;fill:url(#linearGradient5175);fill-opacity:1;stroke:#1a1a1a;stroke-width:0.06614583;stroke-miterlimit:3.4000001;stroke-dasharray:none;filter:url(#filter5165)" />
+    <rect
+       style="opacity:1;fill:#ffccaa;stroke:#1a1a1a;stroke-width:0.06614583;stroke-miterlimit:3.4000001;stroke-dasharray:none"
+       id="rect14"
+       width="122.16985"
+       height="24.984474"
+       x="38.111908"
+       y="156.27525"
+       ry="1.984375" />
+    <text
+       id="text4520"
+       y="120.31815"
+       x="97.986366"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         y="120.31815"
+         x="97.986366"
+         id="tspan4516"
+         sodipodi:role="line">Nível Lógico</tspan><tspan
+         id="tspan4518"
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         y="128.03241"
+         x="97.986366"
+         sodipodi:role="line">(Logical Level)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="97.986366"
+       y="165.16682"
+       id="text4526"><tspan
+         sodipodi:role="line"
+         id="tspan4522"
+         x="97.986366"
+         y="165.16682"
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Nível Físico</tspan><tspan
+         sodipodi:role="line"
+         x="97.986366"
+         y="172.88109"
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan4524">(Physical Level)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.0076077;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.779168,90.625 c 0,20.19243 0,20.19243 0,20.19243"
+       id="path4563"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.00721014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 95.779168,135.84672 v 20.17651"
+       id="path4565"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5355"
+       style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:25px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,36.167706,63.314373)"><flowRegion
+         id="flowRegion5357"><rect
+           id="rect5359"
+           width="574.57953"
+           height="148.04626"
+           x="-52.816505"
+           y="-17.827066" /></flowRegion><flowPara
+         id="flowPara5361" /></flowRoot>    <rect
+       ry="1.984375"
+       y="43.767197"
+       x="-52.616104"
+       height="24.984474"
+       width="122.16985"
+       id="rect5157"
+       style="opacity:1;fill:url(#linearGradient5159);fill-opacity:1;stroke:#1a1a1a;stroke-width:0.06614583;stroke-miterlimit:3.4000001;stroke-dasharray:none;filter:url(#filter5165)"
+       transform="matrix(1,0,0,1.4622039,90.621653,-8.062046)" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient4555);fill-opacity:1;stroke:#1a1a1a;stroke-width:0.07998461;stroke-miterlimit:3.4000001;stroke-dasharray:none"
+       id="rect10"
+       width="122.16985"
+       height="36.532394"
+       x="36.418045"
+       y="53.61327"
+       ry="2.9015608" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="98.041344"
+       y="59.858238"
+       id="text4512"><tspan
+         sodipodi:role="line"
+         id="tspan4510"
+         x="98.041344"
+         y="59.858238"
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332">Nível de Visão</tspan><tspan
+         sodipodi:role="line"
+         x="98.041344"
+         y="67.572495"
+         style="font-size:7.05555534px;text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan4514">(View Level)</tspan></text>
+    <rect
+       ry="0.97276479"
+       y="72.731186"
+       x="44.124298"
+       height="12.247692"
+       width="26.720022"
+       id="rect5515"
+       style="opacity:1;fill:#ff9955;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.02165863;stroke-miterlimit:3.4000001;stroke-dasharray:none" />
+    <rect
+       style="opacity:1;fill:#ff9955;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.02165863;stroke-miterlimit:3.4000001;stroke-dasharray:none"
+       id="rect5519"
+       width="26.720022"
+       height="12.247692"
+       x="81.165962"
+       y="72.731186"
+       ry="0.97276479" />
+    <rect
+       ry="0.97276479"
+       y="72.731186"
+       x="123.4993"
+       height="12.247692"
+       width="26.720022"
+       id="rect5521"
+       style="opacity:1;fill:#ff9955;fill-opacity:1;stroke:#1a1a1a;stroke-width:0.02165863;stroke-miterlimit:3.4000001;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="48.448208"
+       y="80.194046"
+       id="text5525"><tspan
+         sodipodi:role="line"
+         id="tspan5523"
+         x="48.448208"
+         y="80.194046"
+         style="font-size:4.93888903px;stroke-width:0.26458332">Visão 1</tspan></text>
+    <text
+       id="text5529"
+       y="80.194046"
+       x="84.960709"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-size:4.93888903px;stroke-width:0.26458332"
+         y="80.194046"
+         x="84.960709"
+         id="tspan5527"
+         sodipodi:role="line">Visão 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="127.29404"
+       y="80.194046"
+       id="text5533"><tspan
+         sodipodi:role="line"
+         id="tspan5531"
+         x="127.29404"
+         y="80.194046"
+         style="font-size:4.93888903px;stroke-width:0.26458332">Visão N</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.28888893px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="109.83154"
+       y="80.194046"
+       id="text5537"><tspan
+         sodipodi:role="line"
+         id="tspan5535"
+         x="109.83154"
+         y="80.194046"
+         style="font-size:11.28888893px;stroke-width:0.26458332">...</tspan></text>
+  </g>
+</svg>
