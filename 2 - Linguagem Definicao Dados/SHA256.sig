@@ -1,4 +1,4 @@
 untrusted comment: verify with jefecomp.pub
-RWQg+h+bHKHZql0++5WTNn0VQoTMvVPweF7TMmJdhg3hEiKGFORIc/Paqo56UG+B1dJ/xp3AJtHDY7MP/NG7qCl68Lt/nnmcBwA=
-SHA256 (2 - Linguagem Definicao Dados.tex) = 781957e0fea17716b27b0260b114df92cdd5c395980e8cd4e7cfcf69d3752022
-SHA256 (2 - Linguagem Definicao Dados.pdf) = f35c53cb220af9ef60c01c01c04cc2c96e7411f7928269592a74aee089f902a7
+RWQg+h+bHKHZqoLhYsKlYkyoMKxSvllh3R6znXZuX4gPrQaEGxnf44cH4htvToFwMlo/GaqBKDgweI1JFzY4mPq7oDSi0i0lsgw=
+SHA256 (2 - Linguagem Definicao Dados.tex) = fbdbb475a1d43c8fb3d37fcda4b5e4ad49cdcf11955d188843e3c652764c4ea8
+SHA256 (2 - Linguagem Definicao Dados.pdf) = 4deed6402d12c4a73688dd1fec4fdca54f99879591124802060c8bc41c2d07e5
