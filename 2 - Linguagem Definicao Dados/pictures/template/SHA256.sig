@@ -1,5 +1,5 @@
 untrusted comment: verify with jefecomp.pub
-RWQg+h+bHKHZqoyJ4Zn6S82KjcaQobQ+1NSuLbDCF3gy9i7xUHPX5akrEIG+0MJy95uPmpy0TKZGkqNvdj/2/mx9DrIKFd0RaAs=
+RWTQZlRUmXlF06t9LnMYxNsdFLFucafWTB+EVr0XwMc3gxTqhSX/mDUuFYxWK9skh9tAyYmDGVoeO/JJtIJKvEZnTI6uxB6Jyw0=
 SHA256 (course_image.pdf) = e891fda2c7f8fca2f0546df470bef3991ce6da33192ee3086527d3207a806093
 SHA256 (happycat-end.pdf) = 3dc639c79cd9396fca0459723a925eed436daf83844194e0d333913d17f99af8
 SHA256 (happycat-end.svg) = b203c466d682cfe825bdb013d0f199d1a2e20a0139cd610432b893160ab1d38f

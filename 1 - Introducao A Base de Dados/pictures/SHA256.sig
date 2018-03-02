@@ -1,5 +1,5 @@
 untrusted comment: verify with jefecomp.pub
-RWQg+h+bHKHZqocQ850ZmqG+IcyB+iJtl3kvMPeOtZGgu6ygO9qZ5AkK0T/PZMKd76ZCVltSyEj+siubbcO3YaEacK/VDS5zng8=
+RWTQZlRUmXlF077YAMVGiFUf1e8QDBGHK80r1bh3TNE8yIpe6bvFPhgemx1HZEPe/rPY4FJKKPEvja0xbE0DcWWpyHQCDyAScgo=
 SHA256 (candidate_key.pdf) = f7f2fb24554f5e30efd88510d890f65c0d4a3cf157f0d2ea551ce974239ff79b
 SHA256 (candidate_key.svg) = 09230b4947b2020f8f8a808a2e3715675cadccd28d4cfdeec4b1124e6b47c35f
 SHA256 (database-server-sgbd.pdf) = f799ad09ad183e318eb1f7684ce5aafe8111b844dcf038ff72cfc61a1743ff26
