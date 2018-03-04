@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+
+\title{Sistema de Apoio Para Localização \\ de Pessoas Desaparecidas (SALPD)\\
+BAN-II}
+
+\author{Professor: \textbf{Jeferson Souza (jefecomp)}}
+
+\begin{document}
+
+\maketitle
+
+\section{Descrição do Trabalho}
+
+O objetivo deste trabalho é modelar uma base de dados relacional de um sistema de apoio para localização de pessoas desaparecidas (SALPD). Além da modelagem da base de dados, é também necessário implementar uma pequena aplicação que permita inserir, remover, atualizar, e consultar os registros na base de dados. Recomenda-se que a implementação do SALPD seja realizada na linguagem de programação Java. Entretanto, cada equipe tem livre arbítrio para escolher outra linguagem de programação, desde que avise previamente. 
+
+Os seguines requisitos (obrigatórios) devem ser considerados na modelagem de dados e implementação do SALPD:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item o modelo de dados deve ser relacional;
+
+\item o modelo de dados deve possuir uma entidade que permita registrar um usuário do sistema;
+
+\item o modelo de dados deve possuir uma entidade que permita registrar os diferentes papéis que um usuário do sistema pode assumir (Administrador, Gestor, Agente, Informante, Anônimo);
+
+\item o modelo de dados deve possuir uma entidade que permita registrar informações sobre uma pessoa desaparecida, tais como:  RG, CPF, nome completo, apelido(s), última localização, usuário que inseriu, usuário que fez a última atualização;
+
+\item o modelo de dados deve possuir uma entidade que permita manter um histórico de todas as localizações informadas sobre uma pessoa desaparecida;
+
+\item o modelo de dados deve possuir uma entidade que permita registrar os detalhes (ex: número de telefone) do contato realizado para dar informações (denúncia) sobre pessoas desaparecidas. A localização do telefone que realizou a denúncia deve ser armazenada juntamente com os detalhes do contato. Caso o número de telefone seja de um celular, simular um rastreamento no sistema implementado para armazenar a localização aproximada do telefone no momento do contato. No caso de telefone fixo, a localização é obtida através do endereço de cadastro da operadora telefônica;
+
+\item a interface e acesso ao dados deve ser genérica, ou seja, independente do banco de dados que estiver sendo utilizado;
+
+\item devem ser criadas visualizações (VIEWS) para facilitar consultas mais complexas a base de dados (ex: pessoa desaparecida a menos de 6 meses, com informação de localização fornecida a menos de 7 dias por denúncia de um informante);
+
+\item devem ser criados índices para otimizar a consulta de informações nas diferentes tabelas.
+
+\end{itemize}
+
+Só poderá existir \underline{\textbf{um usuário anônimo}} na base de dados. \textbf{Fiquem atentos!} Esse usuário anônimo será utilizado por todas as pessoas que realizarem denuncias anônimas, já que denúncias anônimas são registradas no sistema por um outra sistema computacional.
+
+\section{Equipes}
+
+As equipes devem ser formadas por grupos de alunos (mínimo 2 e máximo de 3 alunos). Cada grupo deve organizar-se de forma a que todos os seus membros contribuam na elaboração do trabalho (\underline{\textbf{Trabalho colaborativo!}}). Uma forma muito simples de organização é a criação de um repositório remoto (github, bitbucket, entre outros) onde cada membro pode fazer suas contribuições diretamente no repositório remoto criado.
+
+\section{Avaliação}
+
+Os trabalhos serão avaliados conforme os seguintes critérios:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item modelo de dados usando o diagrama de schema (50\%);
+
+\item Implementação do sistema (30\%);
+
+\item elaboração de documento (mínimo de 3 e máximo de 5 páginas) com a descrição do modelo de dados e da implementação, justificando as decisões tomadas durante a execução do projeto (10\%);
+
+\item apresentação oral (por equipe) do modelo de dados e da implementação do sistema (10\%).
+
+\end{itemize}
+
+\section{Data de Entrega}
+
+Os trabalhos precisam ser entregues pelas equipes até o dia \textbf{\underline{19/06/2018}}.
+
+\end{document}

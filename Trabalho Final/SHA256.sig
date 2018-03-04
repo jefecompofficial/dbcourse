@@ -1,3 +1,4 @@
 untrusted comment: verify with jefecomp.pub
-RWTQZlRUmXlF09VCkygENbUZl1KeCNqWC0WSNbEgLqZL4UWwDcXP/33Ti6LWjteQ/zMr8P6aLpdOSO96/ubxjNRS3GUwy4l1VQQ=
+RWTQZlRUmXlF04BiSRAt5bx5k6/+vc93AG3hfuUTbtkqfqMcLX/bj1eTY2c8Tcxl6ps3hI22LNLpXhVfHSbLo4HPB4AJd/4hCwM=
 SHA256 (Trabalho_Final.pdf) = 1f7686223d08e068f9f6ff42409794630cff8ba361d8e7dc1df94af831b660c4
+SHA256 (Trabalho_Final.tex) = aa0fb2e4659ca1687060535393ea1ab2fbaac5e5dd443757f5a34c1cf9ffcb61
