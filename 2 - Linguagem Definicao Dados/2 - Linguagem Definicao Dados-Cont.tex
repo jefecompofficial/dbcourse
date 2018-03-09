@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  This Beamer template was created by Cameron Bracken.
+%%  Anyone can freely use or modify it for any purpose
+%%  without attribution.
+%%
+%%  The current presentation created by Jeferson L. R. Souza (jefecomp) is based on the template created by Cameron Bracken. 
+%%  
+%%  Small modifications have been introduced and anyone is free to use such modified version.
+%%
+%% Last Modified: June 14, 2015.
+
+\documentclass[xcolor=x11names,compress]{beamer}
+
+%% General document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{decorations.fractals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Hyperref
+\usepackage{hyperref}
+
+%Multirow package
+\usepackage{multirow} 
+
+%Math packages
+\usepackage{amsmath}
+\usepackage{textcomp}
+
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[footline=authorinstitutetitle,subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{professionalfonts}
+\usepackage{mathpazo}
+
+\setbeamerfont{title like}{shape=\scshape,series=\bfseries}
+\setbeamerfont{frametitle}{shape=\scshape,series=\bfseries}
+
+\setbeamercolor*{lower separation line head}{bg=Green3} 
+\setbeamercolor*{upper separation line foot}{bg=Green3} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=black,bg=black!10} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black}
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!3} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{blocks}[rounded] [shadow=true]
+\setbeamertemplate{frametitle continuation}[from second][(Continuação)]
+
+%%  declaring picture extensions and default path
+\DeclareGraphicsExtensions{.png, .jpg, .pdf}
+\graphicspath{{pictures/}}
+
+%% Supporting source code lists
+\usepackage{listings}
+\lstset{breakatwhitespace,
+language=Java,
+columns=fullflexible,
+keepspaces,
+breaklines,
+tabsize=3, 
+showstringspaces=false,
+extendedchars=true}
+
+%Text position
+\usepackage{textpos}
+\setlength{\TPHorizModule}{128mm}
+\setlength{\TPVertModule}{96mm}
+
+\usepackage{array}
+
+%Puting text and other float elements over pictures
+\usepackage[percent]{overpic}
+
+
+%% Hyperlinks over all the document
+\usepackage{hyperref}
+
+%% Controlling text alignment
+\usepackage{ragged2e}
+
+%% Framed text
+\usepackage{framed}
+
+%% Math packages
+\usepackage{amsmath}
+
+\begin{document}
+
+\title[Linguagem de Definição de Dados (DDL) \hskip20mm \insertframenumber / \inserttotalframenumber  \hskip33.5mm \inserttitlegraphic]{Linguagem de Definição de Dados (DDL) - Continuação \\[4mm]
+\includegraphics[keepaspectratio,width=.25\textwidth]{database-server}}
+\author[@2018 Prof. Jeferson Souza, MSc (jefecomp) - All rights reserved.]{
+	\textcolor{blue}{Prof. Jeferson Souza, MSc.} \\[1mm] 
+	\textcolor{blue}{\textit{{\footnotesize (jefecomp) }}}\\[1.5mm]
+	 \underline{{\footnotesize jefecomp.official@gmail.com}}
+	 \vspace*{1mm}
+}
+\institute[]{\centering \includegraphics[keepaspectratio,width=.5\textwidth]{template/logo_udesc_joinville_horizontal_assinatura}
+}
+
+\date{}
+
+\titlegraphic{\includegraphics[keepaspectratio,width=.2\textwidth]{template/logo_udesc_joinville_horizontal_assinatura}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[plain,noframenumbering]
+\titlepage
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Visões(Views)}
+\subsection{Visões(Views)}
+
+\begin{frame}{Visões (Views)}
+
+\begin{alertblock}{O que são visões (views)?}
+Visões são uma forma alternativa de acessar dados no modelo de dados. As visões são criadas a partir de consultas válidas realizadas sobre tabelas ou outras visões;
+\end{alertblock}
+
+\pause 
+
+\begin{alertblock}{Para que servem as visões (views)?}
+
+\begin{itemize}
+\itemsep 3mm
+\item Fornecem um meio de acesso mais simples e direto ao dados;
+
+\item Permitem acesso controlado e limitado a dados com restrições de acesso;
+
+\item Permitem "estender" virtualmente o modelo de dados, e criar relações virtuais que podem ser utilizadas exatamente da mesma forma que tabelas.
+
+\end{itemize}
+
+\end{alertblock} 
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Diferença entre tabelas e visões (views)}
+
+\begin{itemize}
+\itemsep 5mm
+
+\item Tabelas são estrturas criadas para armazenar dados;
+
+\item Visões são o resultado de consultas que podem ser manipuladas posteriormente da mesma forma que tabelas;
+
+\item Caso não exista a necessidade de relacionamentos, tabelas podem ser criadas sem a existência de outras estruturas na base de dados;
+
+\item A \underline{criação} de uma \underline{visão} depende da existência de, ao menos, \underline{uma tabela};
+
+\item Os dados mostrados por uma visão podem ser modificados (em alguns casos) por comandos de inserção, remoção, e atualização. Entretanto, modificações não são recomendas, já que as mesmas devem refletir modificações nas tabelas que dão origem a  visão alvo;
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Criar visões (views)}
+
+\centering \includegraphics[keepaspectratio,width=\textwidth]{create_view}
+
+\end{frame}
+
+\begin{frame}{Criar visões (views)}
+
+Exemplos:
+
+\begin{alertblock}{OBS: cargo\_id = 1 é o identificador para o cargo de Professor.}
+\textbf{CREATE VIEW} professores\_view as SELECT nome, sobrenome, email, cpf, cargo\_id, departamento\_id FROM usuario where cargo\_id = 1;
+\end{alertblock}
+
+
+\pause
+
+\begin{alertblock}{Pode-se depois realizar consultas diretamente na Visão(View)}
+
+\textbf{SELECT} * FROM professores\_view where departamento\_id = 1;
+
+\end{alertblock}
+
+\begin{alertblock}{OBS: departamento\_id=1 é o identificador do DCC.}
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Visões Materializadas (Materialised Views)}
+
+Alguns SGBDs permitem que visões sejam armazenadas em disco. Esse tipo de visão é chamada de \textbf{visão materializada (materialised view)}. Caso dados sejam inseridos na base de dados, e o resultado da consulta que define a visão mude, a visão materializada também é atualizada.
+
+\end{frame}
+
+\begin{frame}{Criar Visões Materializadas (Materialised Views)}
+
+\centering \includegraphics[keepaspectratio,width=\textwidth]{create_materialised_view}
+
+\end{frame}
+
+\begin{frame}{Criar Visões Materializadas (Materialised Views)}
+
+\begin{alertblock}{}
+\textbf{CREATE MATERIALIZED VIEW} professores\_view as SELECT nome, sobrenome, email, cpf, cargo\_id, departamento\_id FROM usuario where cargo\_id = 1;
+\end{alertblock}
+
+\begin{alertblock}{}
+
+\textbf{SELECT} * FROM professores\_view where departamento\_id = 1;
+
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{}
+
+\begin{frame}[plain,allowframebreaks,noframenumbering]{Bibliografia}
+
+\begin{thebibliography}{Garcia-MolinaEtAl, 2008}
+
+\bibitem[Garcia-MolinaEtAl, 2008]{Garcia-MolinaEtAl2008}
+
+Garcia-Molina, H. and Ullman, J. D. and Widom, J.
+
+\newblock{{\em ``Database Systems: The Complete Book"}. 2nd edition. Prentice Hall, 2008.}
+
+\bibitem[PostgreSQLManual, 2018]{PostgreSQL10_2}
+
+PostgreSQL Development Group.
+
+\newblock{{\em ``PostgreSQL 10.2 Documentation"}. 2018.}
+
+\bibitem[SilberchatzEtAl, 2011]{SilberchatzEtAl2011}
+
+Silberschatz, A. and Korth, H.F. and Sudarshan, S.
+
+\newblock	{{\em ``Database Systems"}. 6th edition. McGrawHill, 2011.}
+
+\end{thebibliography}
+
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]
+
+\begin{center}
+\includegraphics[keepaspectratio, width=.8\textwidth]{template/happycat-end}
+\end{center}
+\end{frame}
+
+\end{document}
