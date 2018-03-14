@@ -116,6 +116,111 @@ extendedchars=true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Integridade}
+\subsection{Restrições}
+\begin{frame}{Integridade do dados}
+
+\begin{alertblock}{Restrições de integridade}
+Como visto nos slides anteriormente no material do curso é possível criar restrições na definição das tabelas do banco de dados. A definição de restrições permite especificar o modelo de consistência que os dados devem seguir, e portanto são denominadas \textbf{restrições de integridade}.
+\end{alertblock}
+
+\begin{alertblock}{Exemplos}
+\begin{itemize}
+\itemsep 5mm
+
+\item O nome do usuário não pode ser nulo;
+
+\item Dois usuários não podem ter o mesmo cpf;
+
+\item O saldo da conta deve ser sempre maior do que R\$50,00;
+
+\end{itemize}
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Restrições de integridade}
+
+Algumas das formas de especificar restrições de integridade já foram vistas anteriormente:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item \textbf{NULL}; 
+
+\item \textbf{NOT NULL};
+
+\item \textbf{UNIQUE};
+
+\item \textbf{DEFAULT}.
+
+\end{itemize}
+
+Entretanto, vamos ver mais alguns exemplos da restrição \textbf{UNIQUE}.
+
+\end{frame}
+
+\begin{frame}{Restrições de integridade: \textit{UNIQUE}}
+
+\begin{alertblock}{Exemplo de candidatos a chave com \textit{UNIQUE}}
+\textbf{CREATE TABLE} usuario(id \textcolor{red}{serial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(20), email \textcolor{red}{varchar}(30), cpf \textcolor {red}{char} (11)., \textit{UNIQUE}(email,cpf));
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Restrições de integridade: \textit{CHECK}}
+
+Com a restrição do tipo check é possível definir uma expressão (ex: preco > 0) que deve ser satisfeita durante a manipulação dos dados. 
+
+\begin{alertblock}{Exemplo 1}
+\textbf{CREATE TABLE} conta(nr\_conta \textcolor{red}{bigserial}, agencia \textcolor{red}{bigint}, saldo \textcolor{red}{numeric}, \textit{PRIMARY KEY} (nr\_conta,agencia), \textit{FOREIGN KEY}(agencia) references agencia(id), \textit{\textbf{CHECK}}(saldo > 0));
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{CREATE TABLE} departamento (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), sigla \textcolor{red}{varchar}(4),  \textit{\textbf{CHECK}}(sigla \textbf{in} ('DCC','DMAT','DEC','DEE')));
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{CREATE TABLE} departamento (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), sigla \textcolor{red}{varchar}(4),  \textit{\textbf{CHECK}}(sigla \textbf{in} (select sigla from siglas where tipo = 'departamento')));
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Integridade Referencial}
+
+\begin{alertblock}{Conceito}
+Integridade referencial visa garantir que um conjunto de valores que apareçam em uma determinada tabela, sejam consistentes com os valores de sua tabela de referência. 
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{CREATE TABLE} usuario (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), dept \textcolor{red}{bigint} \textit{\textbf{references}} departamento);
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{CREATE TABLE} departamento (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), sigla \textcolor{red}{char}(3) UNIQUE NOT NULL); \\[5mm]
+
+\textbf{CREATE TABLE} curso (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), dept \textcolor{red}{char}(3) UNIQUE NOT NULL \textit{\textbf{references}} departamento (sigla));
+\end{alertblock}
+
+\begin{alertblock}{\textcolor{red}{Importante}}
+Colunas que não sejam chaves primárias para serem referenciadas devem ser, pelo menos, únicas. 
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Integridade Referencial: Operações em cascata}
+
+É possível realizar operações em cascata na base de dados para manter a integridade referencial. Para isso, basta definir as chaves estrangeiras com a cláusula \textbf{cascade}. 
+
+\begin{alertblock}{Exemplo}
+
+\textbf{CREATE TABLE} curso (id \textcolor{red}{bigserial} \textit{PRIMARY KEY}, nome \textcolor{red}{varchar}(30), dept \textcolor{red}{char}(3) UNIQUE NOT NULL, \textit{FOREIGN KEY}(dept) \textit{\textbf{references}} departamento (sigla) \textbf{on delete cascade on update cascade});
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Visões(Views)}
 \subsection{Visões(Views)}
 

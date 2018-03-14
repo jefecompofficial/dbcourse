@@ -522,6 +522,30 @@ As opções são muitas, e portanto serão apresentados alguns exemplos a seguir
 
 \end{frame}
 
+\begin{frame}{Adicionar Restrições a Coluna}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{ALTER TABLE} endereco \textit{ADD} \textit{UNIQUE}(descricao);
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{ALTER TABLE} endereco \textit{ADD} CONSTRAINT descricao\_unique \textit{UNIQUE}(descricao);
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Remover Restrições da Coluna}
+
+\begin{alertblock}{Exemplo}
+\textbf{ALTER TABLE} endereco \textit{DROP} CONSTRAINT descricao\_unique;
+\end{alertblock}
+
+\begin{alertblock}{\textcolor{red}{Importante}}
+É necessário saber o nome da restrição para remover a mesma da tabela.
+\end{alertblock}
+
+\end{frame}
+
 \subsection{Remoção de Tabela}
 
 \begin{frame}{Remover Tabela}
