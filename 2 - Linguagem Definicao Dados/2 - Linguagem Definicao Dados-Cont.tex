@@ -97,7 +97,7 @@ extendedchars=true}
 \author[@2018 Prof. Jeferson Souza, MSc (jefecomp) - All rights reserved.]{
 	\textcolor{blue}{Prof. Jeferson Souza, MSc.} \\[1mm] 
 	\textcolor{blue}{\textit{{\footnotesize (jefecomp) }}}\\[1.5mm]
-	 \underline{{\footnotesize jefecomp.official@gmail.com}}
+	 \underline{{\footnotesize jeferson.souza@udesc.br}}
 	 \vspace*{1mm}
 }
 \institute[]{\centering \includegraphics[keepaspectratio,width=.5\textwidth]{template/logo_udesc_joinville_horizontal_assinatura}
@@ -319,6 +319,299 @@ Alguns SGBDs permitem que visões sejam armazenadas em disco. Esse tipo de visã
 \end{alertblock}
 
 \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Usuários e Grupos}
+\subsection{Usuários e Grupos}
+
+\begin{frame}{Criar Usuário e Grupo}
+
+\begin{alertblock}{Um passo antes dos privilégios}
+Antes de entrarmos efetivamente no domínio de privilégios é necessário aprendermos a criar usuários e grupos no SGBD.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Criar Usuário ou Grupo}
+
+Para criar um usuário ou um grupo no postgres podemos usar os seguintes comandos:\\[5mm]
+
+\centering \includegraphics[keepaspectratio,width=\textwidth]{create_user}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Criar Usuário ou Grupo}
+
+Opções mais importantes:
+
+\begin{itemize}
+
+\itemsep 5mm
+
+\item \textit{SUPERUSER}: cria um usuário ou grupo com poderes de super usuário;
+
+\item \textit{CREATEDB}: cria um usuário ou grupo com permissão para criar bases de dados;
+
+\item \textit{CREATEROLE}: cria um usuário ou grupo com permissão para criar outros usuários ou grupos;
+
+\item \textit{LOGIN}: cria um usuário ou grupo com permissão para conectar no SGBD;
+
+\item \textit{PASSWORD}: cria um usuário ou grupo com permissão para conectar no SGBD.
+
+\item \textit{INHERIT}: cria um usuário ou grupo com permissão de utilização de todos os privilégios dos grupos, o qual o dado usuário ou grupo é membro.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Criar Usuário ou Grupo: Exemplo}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{CREATE USER} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{CREATE USER} jefecomp with PASSWORD '!\#hammer22';
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{CREATE ROLE} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 4}
+\textbf{CREATE ROLE} jefecomp with PASSWORD '!\#hammer22';
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Criar Usuário: Exemplo (Continuação)}
+\begin{alertblock}{\textbf{Pergunta:}}
+Qual a diferença entre usar o \textbf{CREATE USER} e o \textbf{CREATE ROLE}?
+\end{alertblock}
+
+\pause
+
+\begin{alertblock}{\textbf{Resposta:}}
+O comando \textbf{CREATE USER} é um ``alias" sobre o comando \textbf{CREATE ROLE} com a opção LOGIN. Logo, é necessário passar a opção LOGIN explicitamente quando criar um usuário com o comando \textbf{CREATE ROLE}.
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Criar Usuário: Exemplo (Continuação)}
+\begin{alertblock}{\textbf{Pergunta:}}
+Caso eu esqueça de adicionar alguma opção na criação do meu usuário, o que eu posso fazer para alterar?
+\end{alertblock}
+
+\pause
+
+\begin{alertblock}{\textbf{Resposta:}}
+Usar o comando \textbf{ALTER USER}. Exemplo:
+
+\textbf{ALTER USER} jefecomp with LOGIN;
+
+\end{alertblock}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Privilégios}
+\subsection{Privilégios}
+
+\begin{frame}{O que São Privilégios?}
+
+As vezes queremos restringir o que um determinado usuário (ou grupo de usuários) da base de dados pode fazer, ou seja, que tipo de operações podem ser executadas. Exemplos dessas operações são: leitura, escrita, atualização, e remoção.
+
+\pause 
+
+\begin{alertblock}{\centering \textbf{Privilégio}}
+Um privilégio especifica uma autorização concedida a um dado usuário que permita a execução de cada uma dessas operações.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Atribuir Privilégios}
+
+\centering \includegraphics[keepaspectratio,width=\textwidth]{grant}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Lista de Privilégios - Mais Comuns}
+
+\begin{itemize}
+\itemsep 5mm
+
+\item \textit{SELECT}:  permite realizar operações de consulta;
+
+\item \textit{INSERT}: permite realizar operações de inserção de dados;
+
+\item \textit{UPDATE}: permite realizar operações de atualização de dados;
+
+ \item \textit{DELETE}: permite realizar operações de remoção de dados;
+  
+\item \textit{REFERENCES}: permite realizar operaçẽs de criação de chaves estrangeiras;
+
+\item \textit{USAGE}: no geral permite o uso/acesso a recursos associados a um dado objeto (ex: schemas);
+
+\item \textit{CREATE}: permite realizar operações de criação de objetos (ex: tabelas, schemas, sequências, etc);
+
+\item \textit{CONNECT}: permite conexão com uma dada base de dados;
+
+\item \textit{ALL PRIVILEGES}: permite o uso de todos os privilégios de um dado objeto.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Atribuir Privilégios - Schema}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{GRANT} \textit{CREATE} \textbf{ON} \textit{SCHEMA} banii \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{GRANT} \textit{CREATE} \textbf{ON} \textit{SCHEMA} banii \textbf{TO} jefecomp \textit{WITH GRANT OPTION};
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{GRANT} \textit{ALL PRIVILEGES} \textbf{ON} \textit{SCHEMA} banii \textbf{TO} PUBLIC;
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Atribuir Privilégios - Base de Dados}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{GRANT} \textit{CREATE, CONNECT} \textbf{ON} \textit{DATABASE} privilegios \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{GRANT} \textit{CONNECT} \textbf{ON} \textit{DATABASE} privilegios \textbf{TO} jefecomp \textit{WITH GRANT OPTION};
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Atribuir Privilégios - Tabelas}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{GRANT} \textit{SELECT,INSERT} \textbf{ON} movimentos \textbf{TO} jefecomp,lucas;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{GRANT} \textit{SELECT,UPDATE} \textbf{ON} cliente \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{GRANT} \textit{SELECT,INSERT,UPDATE} \textbf{ON} \textit{ALL TABLES IN SCHEMA} banii \textbf{TO} jefecomp,lucas;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 4}
+\textbf{GRANT} \textit{SELECT(nome)} \textbf{ON} usuario \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 5}
+\textbf{GRANT} \textit{UPDATE(descricao)} \textbf{ON} endereco \textbf{TO} lucas;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 6}
+\textbf{GRANT} \textit{SELECT,DELETE} \textbf{ON} produto \textbf{TO} lucas;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 7}
+\textbf{GRANT} \textit{REFERENCES} \textbf{ON} equipamento \textbf{TO} lucas;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 8}
+\textbf{GRANT} \textit{REFERENCES(cpf)} \textbf{ON} usuario \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 9}
+\textbf{GRANT} \textit{REFERENCES(cpf)} \textbf{ON} usuario \textbf{TO} jefecomp \textit{WITH GRANT OPTION};
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Retirar Privilégios}
+
+\centering \includegraphics[keepaspectratio,width=\textwidth]{revoke}
+
+\end{frame}
+
+\begin{frame}{Retirar Privilégios - Base de Dados}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{REVOKE} \textit{CONNECT} \textbf{ON} \textit{DATABASE} manufatura \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{REVOKE} \textit{GRANT OPTION FOR CONNECT} \textbf{ON} \textit{DATABASE} manufatura \textbf{TO} jefecomp;
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Retirar Privilégios - Tabelas}
+
+\begin{alertblock}{Exemplo 1}
+\textbf{REVOKE} \textit{SELECT,INSERT} \textbf{ON} movimentos \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{REVOKE} \textit{GRANT OPTION FOR UPDATE} \textbf{ON} produto \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{REVOKE} \textit{SELECT(nome)} \textbf{ON} usuario \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 4}
+\textbf{REVOKE} \textit{SELECT,INSERT,UPDATE} \textbf{ON} \textit{ALL TABLES IN SCHEMA} banii \textbf{FROM} zezinho;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 5}
+\textbf{REVOKE} \textit{SELECT,INSERT,UPDATE} \textbf{ON} \textit{ALL TABLES IN SCHEMA} banii \textbf{FROM} zezinho CASCADE;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 6}
+\textbf{REVOKE} \textit{GRANT OPTION FOR UPDATE} \textbf{ON} produto \textbf{FROM} jefecomp CASCADE;
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Privilégios e Grupos - Atribuição}
+
+É possível também atribuir usuários a grupos. 
+
+\begin{alertblock}{Exemplo 1}
+\textbf{GRANT} professores \textbf{TO} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{GRANT} professores \textbf{TO} jefecomp \textit{WITH ADMIN OPTION};
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame}{Privilégios e Grupos - Retirada}
+
+Ou, de forma similar, retirar usuários de grupos.
+
+\begin{alertblock}{Exemplo 1}
+\textbf{REVOKE} administrador \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 2}
+\textbf{REVOKE} \textit{ADMIN OPTION FOR} professores \textbf{FROM} jefecomp;
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 3}
+\textbf{REVOKE} \textit{ADMIN OPTION FOR} professores \textbf{FROM} jefecomp \textit{CASCADE};
+\end{alertblock}
+
+\begin{alertblock}{Exemplo 4}
+\textbf{REVOKE} administrador \textbf{FROM} jefecomp \textit{CASCADE};
+\end{alertblock}
+
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
