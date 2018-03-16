@@ -357,7 +357,7 @@ Opções mais importantes:
 
 \item \textit{LOGIN}: cria um usuário ou grupo com permissão para conectar no SGBD;
 
-\item \textit{PASSWORD}: cria um usuário ou grupo com permissão para conectar no SGBD.
+\item \textit{PASSWORD}: cria um usuário ou grupo com uma senha atribuída;
 
 \item \textit{INHERIT}: cria um usuário ou grupo com permissão de utilização de todos os privilégios dos grupos, o qual o dado usuário ou grupo é membro.
 
@@ -612,6 +612,56 @@ Ou, de forma similar, retirar usuários de grupos.
 
 \end{frame}
 
+\begin{frame} {Privilégios Default - Alteração}
+
+O postgreSQL trás uma lista de privilégios padrão que é atribuída a usuários e grupos, os quais estão associados ao ``grupo especial" \textit{PUBLIC}. Para alterar esses valores padrões existem (basicamente) duas formas:
+
+\begin{itemize}
+\itemsep 5mm
+
+\item atribuir ou retirar privilégios do ``grupo especial" \textit{PUBLIC} de um dado objeto;
+
+\item utilizar o comando \textbf{ALTER} \textit{DEFAULT PRIVILEGES}.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame} {Privilégios Default - Alteração}
+
+Alterar privilégios default de objetos já existentes:
+
+\begin{alertblock}{Remove todos os privilégios defaults do schema banii}
+
+\textbf{REVOKE} \textit{ALL PRIVILEGES} \textbf{ON} \textit{SCHEMA} banii \textbf{FROM} \textit{PUBLIC};
+
+\end{alertblock}
+
+\begin{alertblock}{Remove todos os privilégios defaults de todas as tabelas do schema banii}
+
+\textbf{REVOKE} \textit{ALL PRIVILEGES} \textbf{ON} \textit{ALL TABLES IN SCHEMA} banii \textbf{FROM} \textit{PUBLIC};
+
+\end{alertblock}
+
+\begin{alertblock}{Adiciona a permissão default de CREATE na base de dados banii\_db para permitir que todos os usuários possam criar schemas}
+
+\textbf{GRANT} \textit{CREATE} \textbf{ON} \textit{DATABASE} banii\_db \textbf{TO} \textit{PUBLIC};
+
+\end{alertblock}
+
+\end{frame}
+
+\begin{frame} {Privilégios Default - Alteração}
+
+Alterar privilégios default de objetos criados no futuro:
+
+\begin{alertblock}{Remove todos os privilégios defaults de todas as tabelas do schema banii}
+
+\textbf{ALTER DEFAULT PRIVILEGES} \textit{IN SCHEMA} banii \textit{REVOKE ALL PRIVILEGES ON TABLES TO PUBLIC};
+
+\end{alertblock}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
