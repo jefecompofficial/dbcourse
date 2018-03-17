@@ -1,6 +1,8 @@
 untrusted comment: verify with jefecomp.pub
-RWTQZlRUmXlF0yjVcj9FnEDLogR60nHnHKsNNsSJNdticUk8RK8sbJizgczYCh+Ya/RpTrJ/eJDGw8L3XKouLNja+OpgRExRxQg=
-SHA256 (Lista_Exercicios-I-2018-1.pdf) = f97c8a6ba0259da88615706a162c72feaf8bd14e84d4017758525f5e92ecda7f
-SHA256 (Lista_Exercicios-I-2018-1.tex) = 5354fb524875861a8dc393e3e8364fc788c7e65ed7a680f8aa0ae13cdff8109b
-SHA256 (Lista_Exercicios-II-2018-1.pdf) = 5fd961ed0e0d9c7f7e399f204be83e3a4ce2dd1747632c81ddd3250519cc5b6b
-SHA256 (Lista_Exercicios-II-2018-1.tex) = d1387a89504a56bac66c773962e5468fddbfd0b2d42b59f8e18f106198430b31
+RWTQZlRUmXlF0407/8eY82AVUKSF4BGbrLymmE6aNhCAHKHSANyD6dVPfJ7hRjtXS5PehepoIwSbmVvwdiUM1kZtNh5ebAg8CgI=
+SHA256 (Lista_Exercicios-I-2018-1.pdf) = 0432a03d018bd257a61d6c71ce0431789d7e384e893aeee11f0e9a5272d0e7f3
+SHA256 (Lista_Exercicios-I-2018-1.tex) = 63e28f3920e97ad530b851be6f98c544234b6409ae21b450c1ce20e1aceb3cd3
+SHA256 (Lista_Exercicios-II-2018-1.pdf) = 1967a491cc8f556f43eee2ecfc42801c08e5e44ee03fe5fe6010aebc2b13c278
+SHA256 (Lista_Exercicios-II-2018-1.tex) = af067fa59240313c1991dfdafa923e15e51a94d8322ca54fab315ec991644c36
+SHA256 (Lista_Exercicios-III-2018-1.pdf) = 8f1bffce713facb1ef0cdeb29ea3c65866956a54a2e3eb2e76846e5b71bda0e4
+SHA256 (Lista_Exercicios-III-2018-1.tex) = 0bbb44d16d80cbd5a2eb2179c6b29bf761ebeb87757ea8172eb9b6522d090953
