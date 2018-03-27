@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+\title{Lista de Exercícios IV\\
+BAN-II}
+
+\author{Professor: \textbf{Jeferson Souza, MSc. (jefecomp)}}
+
+\begin{document}
+
+\date{}
+
+\maketitle
+
+\begin{center}
+Data de Entrega: \textbf{\underline{05/04/2018}}
+\end{center}
+
+\section*{Exercícios}
+
+\begin{enumerate}
+\itemsep 10mm
+
+\item Explique com as suas palavras qual a diferença entre funções e gatilhos.
+
+\item Escreva uma função que ao ser executada permita apagar uma base de dados denominada banii.
+
+\item Escreva uma função que concatene o nome e o sobrenome dos registros de uma tabela usuario, e retorne essa concatenação como resultado.
+
+\item Escreva uma função de população de registros na base de dados que terá o seguinte comportamento:
+
+\begin{enumerate}
+
+\item A função deve criar uma tabela papel na base de dados com as seguintes colunas: id, descricao;
+
+\item A função deve criar uma tabela usuario na base de dados com as seguintes colunas: id, nome, sobrenome, cpf, email, senha, papel;
+
+\item A função deve inserir os seguintes papéis na tabela papel: administrador, gestor, e usuario;
+
+\item O papel administrador tem poderes totais de manipulação da tabela de usuario;
+
+\item O papel gestor pode inserir, atualizar, e consultar dados na tabela de usuario;
+
+\item O papel usuario pode consultar dados na tabela usuario.
+
+\item A função deve inserir, pelo menos, um usuario de cada tipo (administrador, gestor, usuario) na tabela usuario.
+
+\end{enumerate}
+
+\item Escreva uma função que retorne um tipo composto com o nome, cpf, e email de cada um dos usuarios da tabela usuario criada na questão anterior.
+
+\item Crie um gatilho que ao inserir um registro na tabela de usuario dispare uma função que cadastre uma senha gerada automaticamente. A senha deve consistir na concatenação do nome e do cpf do usuario.
+
+\item Crie um gatilho que ao remover um registro da tabela usuario dispare uma função que insira um registro na tabela auditoria\_usuario, com as seguintes colunas: id, nome, sobrenome, cpf, email, senha, papel, data\_remocao.
+
+\end{enumerate}
+
+\end{document}
