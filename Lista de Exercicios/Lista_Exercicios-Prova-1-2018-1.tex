@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+\usepackage{color}
+
+
+\title{Lista de Exercícios Prova I\\
+BAN-II}
+
+\author{\textbf{Prof. Jeferson Souza, MSc. (jefecomp)} \\
+\textit{jeferson.souza@udesc.br}
+}
+
+\begin{document}
+
+\date{}
+
+\maketitle
+\section*{Exercícios}
+
+\begin{enumerate}
+\itemsep 10mm
+
+\item Explique com suas palavras o que é um SGBD.
+
+\item Por que é importante manter a integridade dos dados?
+
+\item Crie um modelo de dados para um sistema de gestão acadêmica. Especifique, pelo menos, 5 tabelas e considere que todas as tabelas fazem parte da base de dados \textbf{banii} e do esquema \textbf{exercicio\_prova\_banii}.
+
+\item Crie dois usuários (administrador e utilizador) e faça com que o usuário administrador tenha acesso total ao modelo de dados, e o usuário utilizador possa somente fazer leitura no mesmo modelo de dados.
+
+\item Crie uma visão que mostre o número total de produtos de um mesmo tipo, juntamente com a descrição do tipo do produto referenciado. Considere as seguintes tabelas:
+
+\begin{itemize}
+
+\item \textbf{CREATE TABLE} tipo\_produto (id \textcolor{red}{bigserial} \textbf{PRIMARY KEY}, descricao \textcolor{red}{varchar(100)} \textbf{NOT NULL});
+
+\item \textbf{CREATE TABLE} produto (id \textcolor{red}{bigserial} \textbf{PRIMARY KEY}, descricao \textcolor{red}{varchar(100)} \textbf{NOT NULL}, tipo \textbf{bigserial} \textbf{NOT NULL} \textbf{references} tipo\_produto(id));
+
+\end{itemize}
+
+\item Escreva uma função que cadastre a data da última atualização de um registro de uma tabela de usuario.
+
+\item Crie um gatilho que ao inserir ou atualizar um registro de uma tabela usuário, dispare a função criada na questão anterior. 
+
+\item Considere as tabelas tipo\_produto e produto especificadas anteriormente, e escreva uma consulta que liste a descrição do produto e a descricao do tipo de produto de todos os produtos. Além disso, escreva duas consultas distintas que listem todos os tipos de produtos, mesmo que esses tipos não tenham referência na tabela produto.
+
+\end{enumerate}
+
+\end{document}
